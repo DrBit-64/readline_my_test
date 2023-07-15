@@ -117,24 +117,48 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named readline
+# Target rules for targets named example
 
 # Build rule for target.
-readline: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 readline
-.PHONY : readline
+example: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 example
+.PHONY : example
 
 # fast build rule for target.
-readline/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/readline.dir/build.make CMakeFiles/readline.dir/build
-.PHONY : readline/fast
+example/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/build
+.PHONY : example/fast
+
+example.o: example.cpp.o
+.PHONY : example.o
+
+# target to build an object file
+example.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/example.cpp.o
+.PHONY : example.cpp.o
+
+example.i: example.cpp.i
+.PHONY : example.i
+
+# target to preprocess a source file
+example.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/example.cpp.i
+.PHONY : example.cpp.i
+
+example.s: example.cpp.s
+.PHONY : example.s
+
+# target to generate assembly for a file
+example.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/example.cpp.s
+.PHONY : example.cpp.s
 
 readline.o: readline.cpp.o
 .PHONY : readline.o
 
 # target to build an object file
 readline.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/readline.dir/build.make CMakeFiles/readline.dir/readline.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/readline.cpp.o
 .PHONY : readline.cpp.o
 
 readline.i: readline.cpp.i
@@ -142,7 +166,7 @@ readline.i: readline.cpp.i
 
 # target to preprocess a source file
 readline.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/readline.dir/build.make CMakeFiles/readline.dir/readline.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/readline.cpp.i
 .PHONY : readline.cpp.i
 
 readline.s: readline.cpp.s
@@ -150,7 +174,7 @@ readline.s: readline.cpp.s
 
 # target to generate assembly for a file
 readline.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/readline.dir/build.make CMakeFiles/readline.dir/readline.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/example.dir/build.make CMakeFiles/example.dir/readline.cpp.s
 .PHONY : readline.cpp.s
 
 # Help Target
@@ -161,7 +185,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... readline"
+	@echo "... example"
+	@echo "... example.o"
+	@echo "... example.i"
+	@echo "... example.s"
 	@echo "... readline.o"
 	@echo "... readline.i"
 	@echo "... readline.s"

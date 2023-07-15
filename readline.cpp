@@ -1,17 +1,16 @@
-#include <iostream>
-#include <ncurses.h>
-int main()
+#include "readline.h"
+
+std::string readline()
 {
-    initscr();
     char ch;
+    std::string s{};
+    std::cout << "please enter command:";
     while (true)
     {
-        ch = getch();
-        std::cout << "You entered: " << ch << std::endl;
-        if (ch == 'q')
-        {
+        std::cin.get(ch);
+        if (ch == '\n')
             break;
-        }
+        s += ch;
     }
-    return 0;
+    return s;
 }

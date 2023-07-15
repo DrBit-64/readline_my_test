@@ -92,6 +92,8 @@ readline_EXTERNAL_OBJECTS =
 
 readline: CMakeFiles/readline.dir/readline.cpp.o
 readline: CMakeFiles/readline.dir/build.make
+readline: /usr/lib/x86_64-linux-gnu/libcurses.so
+readline: /usr/lib/x86_64-linux-gnu/libform.so
 readline: CMakeFiles/readline.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/drbit/coding/HPCFromScratch/lesson2/my_test/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable readline"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/readline.dir/link.txt --verbose=$(VERBOSE)

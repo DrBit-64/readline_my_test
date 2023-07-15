@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/readline.dir/readline.cpp.o -o readline 
+/usr/bin/c++ CMakeFiles/readline.dir/readline.cpp.o -o readline  -lcurses /usr/lib/x86_64-linux-gnu/libform.so 
