@@ -1,3 +1,0 @@
-/home/drbit/coding/HPCFromScratch/lesson2/my_test/build/CMakeFiles/example.dir
-/home/drbit/coding/HPCFromScratch/lesson2/my_test/build/CMakeFiles/edit_cache.dir
-/home/drbit/coding/HPCFromScratch/lesson2/my_test/build/CMakeFiles/rebuild_cache.dir

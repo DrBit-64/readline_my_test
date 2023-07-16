@@ -22,6 +22,7 @@ jobs:
       - name: Build project
         working-directory: readline_my_test
         run: |
+          mkdir build
           cd build
           cmake ..
           cmake --build .
