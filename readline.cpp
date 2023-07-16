@@ -72,3 +72,14 @@ std::string readline(const std::string &prompt)
     }
     return line;
 }
+
+void print_color_list()
+{
+    std::cout << "available color:" << std::endl;
+    for (auto it = color2idx.begin(); it != color2idx.end(); ++it)
+    {
+        std::cout << it->first << "; ";
+    }
+    std::cout << std::endl;
+    std::cout.flush();
+}
