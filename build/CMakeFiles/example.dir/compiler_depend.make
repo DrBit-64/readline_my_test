@@ -3,6 +3,7 @@
 
 CMakeFiles/example.dir/example.cpp.o: ../example.cpp \
   /usr/include/stdc-predef.h \
+  ../readline.h \
   /usr/include/c++/11/iostream \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h \
@@ -181,7 +182,6 @@ CMakeFiles/example.dir/example.cpp.o: ../example.cpp \
   /usr/include/c++/11/bits/ostream.tcc \
   /usr/include/c++/11/istream \
   /usr/include/c++/11/bits/istream.tcc \
-  ../readline.h \
   /usr/include/termios.h \
   /usr/include/x86_64-linux-gnu/bits/termios.h \
   /usr/include/x86_64-linux-gnu/bits/termios-struct.h \
@@ -219,7 +219,11 @@ CMakeFiles/example.dir/example.cpp.o: ../example.cpp \
   /usr/include/c++/11/map \
   /usr/include/c++/11/bits/stl_tree.h \
   /usr/include/c++/11/bits/stl_map.h \
-  /usr/include/c++/11/bits/stl_multimap.h
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc
 
 CMakeFiles/example.dir/readline.cpp.o: ../readline.cpp \
   /usr/include/stdc-predef.h \
@@ -439,8 +443,16 @@ CMakeFiles/example.dir/readline.cpp.o: ../readline.cpp \
   /usr/include/c++/11/map \
   /usr/include/c++/11/bits/stl_tree.h \
   /usr/include/c++/11/bits/stl_map.h \
-  /usr/include/c++/11/bits/stl_multimap.h
+  /usr/include/c++/11/bits/stl_multimap.h \
+  /usr/include/c++/11/deque \
+  /usr/include/c++/11/bits/stl_uninitialized.h \
+  /usr/include/c++/11/bits/stl_deque.h \
+  /usr/include/c++/11/bits/deque.tcc
 
+
+/usr/include/c++/11/bits/stl_deque.h:
+
+/usr/include/c++/11/bits/stl_uninitialized.h:
 
 /usr/include/c++/11/bits/stl_map.h:
 
@@ -479,8 +491,6 @@ CMakeFiles/example.dir/readline.cpp.o: ../readline.cpp \
 /usr/include/x86_64-linux-gnu/bits/termios.h:
 
 /usr/include/termios.h:
-
-../readline.h:
 
 /usr/include/c++/11/bits/istream.tcc:
 
@@ -558,6 +568,8 @@ CMakeFiles/example.dir/readline.cpp.o: ../readline.cpp \
 
 /usr/include/c++/11/bits/functional_hash.h:
 
+/usr/include/c++/11/string_view:
+
 /usr/include/c++/11/bits/stl_iterator_base_funcs.h:
 
 /usr/include/ctype.h:
@@ -586,16 +598,6 @@ CMakeFiles/example.dir/readline.cpp.o: ../readline.cpp \
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/atomic_word.h:
 
-/usr/include/c++/11/string_view:
-
-/usr/include/c++/11/ext/string_conversions.h:
-
-/usr/include/c++/11/bits/exception_ptr.h:
-
-/usr/include/c++/11/bits/concept_check.h:
-
-/usr/include/stdint.h:
-
 /usr/include/c++/11/bits/exception.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
@@ -612,6 +614,14 @@ CMakeFiles/example.dir/readline.cpp.o: ../readline.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
+/usr/include/c++/11/bits/concept_check.h:
+
+/usr/include/c++/11/ext/string_conversions.h:
+
+/usr/include/c++/11/bits/exception_ptr.h:
+
+/usr/include/stdint.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/clock_t.h:
@@ -627,6 +637,8 @@ CMakeFiles/example.dir/readline.cpp.o: ../readline.cpp \
 /usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
+
+../readline.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 
@@ -657,6 +669,8 @@ CMakeFiles/example.dir/readline.cpp.o: ../readline.cpp \
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 ../readline.cpp:
+
+/usr/include/c++/11/deque:
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
@@ -764,9 +778,9 @@ CMakeFiles/example.dir/readline.cpp.o: ../readline.cpp \
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
-/usr/include/c++/11/bits/stl_iterator.h:
-
 /usr/include/c++/11/new:
+
+/usr/include/c++/11/bits/stl_iterator.h:
 
 /usr/include/c++/11/bits/ptr_traits.h:
 
@@ -863,6 +877,8 @@ CMakeFiles/example.dir/readline.cpp.o: ../readline.cpp \
 /usr/include/c++/11/bits/locale_classes.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++allocator.h:
+
+/usr/include/c++/11/bits/deque.tcc:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
 

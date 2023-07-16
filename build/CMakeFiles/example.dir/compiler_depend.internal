@@ -4,6 +4,7 @@
 CMakeFiles/example.dir/example.cpp.o
  /home/drbit/coding/HPCFromScratch/lesson2/my_test/example.cpp
  /usr/include/stdc-predef.h
+ /home/drbit/coding/HPCFromScratch/lesson2/my_test/readline.h
  /usr/include/c++/11/iostream
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h
  /usr/include/x86_64-linux-gnu/c++/11/bits/os_defines.h
@@ -182,7 +183,6 @@ CMakeFiles/example.dir/example.cpp.o
  /usr/include/c++/11/bits/ostream.tcc
  /usr/include/c++/11/istream
  /usr/include/c++/11/bits/istream.tcc
- /home/drbit/coding/HPCFromScratch/lesson2/my_test/readline.h
  /usr/include/termios.h
  /usr/include/x86_64-linux-gnu/bits/termios.h
  /usr/include/x86_64-linux-gnu/bits/termios-struct.h
@@ -221,6 +221,10 @@ CMakeFiles/example.dir/example.cpp.o
  /usr/include/c++/11/bits/stl_tree.h
  /usr/include/c++/11/bits/stl_map.h
  /usr/include/c++/11/bits/stl_multimap.h
+ /usr/include/c++/11/deque
+ /usr/include/c++/11/bits/stl_uninitialized.h
+ /usr/include/c++/11/bits/stl_deque.h
+ /usr/include/c++/11/bits/deque.tcc
 
 CMakeFiles/example.dir/readline.cpp.o
  /home/drbit/coding/HPCFromScratch/lesson2/my_test/readline.cpp
@@ -442,4 +446,8 @@ CMakeFiles/example.dir/readline.cpp.o
  /usr/include/c++/11/bits/stl_tree.h
  /usr/include/c++/11/bits/stl_map.h
  /usr/include/c++/11/bits/stl_multimap.h
+ /usr/include/c++/11/deque
+ /usr/include/c++/11/bits/stl_uninitialized.h
+ /usr/include/c++/11/bits/stl_deque.h
+ /usr/include/c++/11/bits/deque.tcc
 

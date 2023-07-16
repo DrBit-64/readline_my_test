@@ -1,7 +1,5 @@
-#include <iostream>
 #include "readline.h"
 
-// 设置终端属性为非规范模式
 void setNoncanonicalMode()
 {
     struct termios t;

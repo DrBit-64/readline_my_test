@@ -7,8 +7,7 @@
 #include <unistd.h>
 #include <unordered_map>
 #include <map>
-
-#endif
+#include <deque>
 
 const std::unordered_map<std::string, int> color2idx = {
     {"red", 31},
@@ -28,5 +27,10 @@ const std::unordered_map<std::string, int> color2idx = {
     {"light gray", 37},
 };
 
+const int max_history_len = 50;
+
 std::string readline(const std::string &prompt);
+
 void print_color_list();
+
+#endif

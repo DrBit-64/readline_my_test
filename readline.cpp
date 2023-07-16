@@ -1,5 +1,7 @@
 #include "readline.h"
 
+static std::deque<std::string> history;
+
 char readChar()
 {
     char c;
@@ -13,6 +15,9 @@ std::string readline(const std::string &prompt)
     std::cout.flush();
     std::string line;
     int pos = 0;
+    if (history.empty())
+        history.push_back("");
+    auto his_it = history.begin();
     while (true)
     {
         char c = readChar();
@@ -58,6 +63,34 @@ std::string readline(const std::string &prompt)
                         std::cout.flush();
                     }
                 }
+                else if (next2 == 'A')
+                {
+                    if (his_it != std::prev(history.end()))
+                    {
+                        std::string spaces(line.size() + prompt.size(), ' ');
+                        std::cout << "\033[2K\r" << spaces;
+                        std::cout.flush();
+                        his_it++;
+                        line = *his_it;
+                        std::cout << "\033[2K\r" << prompt << line;
+                        std::cout.flush();
+                        pos = line.size();
+                    }
+                }
+                else if (next2 == 'B')
+                {
+                    if (his_it != history.begin())
+                    {
+                        std::string spaces(line.size() + prompt.size(), ' ');
+                        std::cout << "\033[2K\r" << spaces;
+                        std::cout.flush();
+                        his_it--;
+                        line = *his_it;
+                        std::cout << "\033[2k\r" << prompt << line;
+                        std::cout.flush();
+                        pos = line.size();
+                    }
+                }
             }
         }
         else
@@ -70,6 +103,11 @@ std::string readline(const std::string &prompt)
             std::cout.flush();
         }
     }
+    history.pop_front();
+    history.push_front(line);
+    history.push_front("");
+    if (history.size() > max_history_len)
+        history.pop_back();
     return line;
 }
 
