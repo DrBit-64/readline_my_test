@@ -6,5 +6,5 @@ CXX_DEFINES =
 
 CXX_INCLUDES = -I/home/drbit/coding/HPCFromScratch/lesson2/my_test
 
-CXX_FLAGS = 
+CXX_FLAGS = -g
 

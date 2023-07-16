@@ -12,52 +12,63 @@ std::string readline(const std::string &prompt)
     std::cout << prompt;
     std::cout.flush();
     std::string line;
+    int pos = 0;
     while (true)
     {
         char c = readChar();
-        switch (c)
+        if (c == '\n')
         {
-        case '\n':
             std::cout << std::endl;
-            return line;
-        case 127:
-        case '\b':
-            if (!line.empty())
-            {
-                line.pop_back();
-                std::cout << "\b \b";
-                std::cout.flush();
-            }
+            std::cout.flush();
             break;
-        case '\033':
-        { // 处理方向键
+        }
+        else if (c == '\b' || c == 127)
+        {
+            if (!line.empty() && pos > 0)
+            {
+                line.erase(pos - 1, 1);
+                std::cout << "\033[D" << line.substr(pos - 1) << " ";
+                if (line.size() - pos + 3 > 0)
+                    std::cout << "\033[" << line.size() - pos + 2 << "D";
+                std::cout.flush();
+                pos--;
+            }
+        }
+        else if (c == '\033')
+        {
             char next1 = readChar();
             if (next1 == '[')
             {
                 char next2 = readChar();
-                if (next2 == 'C')
-                { // 向右移动
-                    if (!line.empty())
+                if (next2 == 'D')
+                {
+                    if (!line.empty() && pos > 0)
                     {
-                        std::cout << "\033[C";
-                        std::cout.flush();
-                    }
-                }
-                else if (next2 == 'D')
-                { // 向左移动
-                    if (!line.empty())
-                    {
+                        pos--;
                         std::cout << "\033[D";
                         std::cout.flush();
                     }
                 }
+                else if (next2 == 'C')
+                {
+                    if (!line.empty() && pos < line.size())
+                    {
+                        pos++;
+                        std::cout << "\033[C";
+                        std::cout.flush();
+                    }
+                }
             }
-            break;
         }
-        default:
-            line += c;
-            std::cout << c;
+        else
+        {
+            line.insert(pos, 1, c);
+            pos++;
+            std::cout << c << line.substr(pos);
+            if (pos < line.size())
+                std::cout << "\033[" << line.size() - pos << "D";
             std::cout.flush();
         }
     }
+    return line;
 }
